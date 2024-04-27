@@ -1,0 +1,57 @@
+{
+  "data": [
+    {
+      "table_name": "linkedin_ads_creatives",
+      "mapping": [
+        {
+          "original_title": "New",
+          "new_title": "New Competition",
+          "conditions": null
+        },
+        {
+          "original_title": "New 1",
+          "new_title": "New Competition 1",
+          "conditions": null
+        }
+      ]
+    },
+    {
+      "table_name": "linkedin_ads_creatives",
+      "mapping": [
+        {
+          "original_title": "New Сhannel",
+          "new_title": "New Сhannel+",
+          "conditions": {
+            "condition": {
+              "or_": [
+                {
+                  "and_": [
+                    {
+                      "column": "campaign_code",
+                      "condition": "matches",
+                      "value": "100500"
+                    },
+                    {
+                      "column": "campaign_original",
+                      "condition": "does_not_contain",
+                      "value": "100500"
+                    }
+                  ]
+                },
+                {
+                  "and_": [
+                    {
+                      "column": "another_column",
+                      "condition": "equals",
+                      "value": "another_value"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
